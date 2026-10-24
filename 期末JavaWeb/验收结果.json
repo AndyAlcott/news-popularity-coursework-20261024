@@ -1,0 +1,40 @@
+[
+  {
+    "case": "decision_tree Java/Python consistency, insert/query/delete",
+    "passed": true,
+    "probability": 0.47627118644067795
+  },
+  {
+    "case": "random_forest Java/Python consistency, insert/query/delete",
+    "passed": true,
+    "probability": 0.4617696371526073
+  },
+  {
+    "case": "empty",
+    "status": 400,
+    "passed": true,
+    "message": "请完整填写新闻特征"
+  },
+  {
+    "case": "negative",
+    "status": 400,
+    "passed": true,
+    "message": "num_imgs 超出允许范围"
+  },
+  {
+    "case": "unknown model",
+    "status": 400,
+    "passed": true,
+    "message": "请选择决策树或随机森林"
+  },
+  {
+    "case": "missing feature",
+    "status": 400,
+    "passed": true,
+    "message": "num_imgs 必须填写有限数值"
+  },
+  {
+    "case": "Redis cache hit and metrics match Python output",
+    "passed": true
+  }
+]

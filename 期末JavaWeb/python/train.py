@@ -4,7 +4,9 @@ https://archive.ics.uci.edu/dataset/332/online+news+popularity
 """
 import hashlib
 import json
+import os
 from pathlib import Path
+import time
 import zipfile
 import urllib.request
 
@@ -37,9 +39,8 @@ MODELS = ROOT / 'models'
 
 def checkpoint(name):
     # 可选的外部同步文件不改变正常输出，默认连续运行。
-    gate = __import__('os').environ.get('NEWS_GATE')
+    gate = os.environ.get('NEWS_GATE')
     if gate:
-        import time
         p = Path(gate)
         p.with_suffix('.ready').write_text(name, encoding='utf-8')
         while not p.exists():
